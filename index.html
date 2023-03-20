@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>sfz.js</title>
+
+    <!--<link href="data:image/gif;" rel="icon" type="image/x-icon" />-->
+
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <!-- sfz.js -->
+    <script src="sfz.js"></script>
+
+    <!-- Demo -->
+    <script src="lib/jquery-1.11.0.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
+    <script src="midi_select.js"></script>
+    <script src="presets.js"></script>
+    <script src="main.js"></script>
+  </head>
+
+  <body itemscope itemtype="http://schema.org/WebApplication">
+    <div class="container">
+      <div class="header">
+          <h1 itemprop="name">sfz.js</h1>
+          <p>Connect a midi keyboard, or alternatively use computer keyboard keys (ASDFGHJKL)</p>
+      </div>
+
+      <div id="demo"> 
+        <div>
+          <span>Input:</span>
+          <select id="midi-select"></select>
+        </div>
+        <div>
+          <span>Instrument:</span>
+          <select id="preset-select"></select>
+        </div>
+      </div>
+
+      <div class="row marketing"></div>
+    </div>
+  </body>
+</html>
