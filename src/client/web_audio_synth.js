@@ -19,16 +19,18 @@ player.prototype.loadBuffers = function(urls){
 }
 
 player.prototype.onBuffersLoaded = function(buffers){
-  console.log("audio buffer loaded")
+  console.log('onBuffersLoaded', buffers);
   var self = this
   this.buffers = {}
 
   _(this.samples).each(function(url, i){
     self.buffers[url] = buffers[i]
   })
+  console.log('onBuffersLoaded2', this.samples, this.buffers);
 }
 
 player.prototype.play = function(region, noteOn){
+  console.log('play', region, noteOn);
   var buffer = this.buffers[region.sample]
   var self = this
   var voicesToRelease = this.voicesToRelease

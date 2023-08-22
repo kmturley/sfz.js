@@ -56,6 +56,7 @@ model.prototype.random = function(){
 }
 
 model.prototype.noteOn = function(channel, pitch, velocity){
+  console.log('noteOn', channel, pitch, velocity);
   var rand = this.random()
   var noteOn = {
     channel: channel,
