@@ -1,6 +1,6 @@
 {
   "name": "sfz",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Mark Wise <markmediadude@gmail.com>",
   "contributors": [],
   "description": "JavaScript solution for using .sfz files",
