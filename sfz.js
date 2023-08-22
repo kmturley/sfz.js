@@ -2900,16 +2900,18 @@ player.prototype.loadBuffers = function(urls){
 }
 
 player.prototype.onBuffersLoaded = function(buffers){
-  console.log("audio buffer loaded")
+  console.log('onBuffersLoaded', buffers);
   var self = this
   this.buffers = {}
 
   _(this.samples).each(function(url, i){
     self.buffers[url] = buffers[i]
   })
+  console.log('onBuffersLoaded2', this.samples, this.buffers);
 }
 
 player.prototype.play = function(region, noteOn){
+  console.log('play', region, noteOn);
   var buffer = this.buffers[region.sample]
   var self = this
   var voicesToRelease = this.voicesToRelease
@@ -3007,6 +3009,7 @@ model.prototype.random = function(){
 }
 
 model.prototype.noteOn = function(channel, pitch, velocity){
+  console.log('noteOn', channel, pitch, velocity);
   var rand = this.random()
   var noteOn = {
     channel: channel,
@@ -10830,6 +10833,7 @@ sfz.Instrument = require("./instrument")
 
 sfz.parse = function(str, driver, audioContext){
   var instrumentDefinition = Parser.parse(str)
+  console.log('instrumentDefinition', instrumentDefinition);
   if (driver) instrumentDefinition.driver = driver
   if (audioContext) instrumentDefinition.audioContext = audioContext
   return new sfz.Instrument(instrumentDefinition)

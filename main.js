@@ -3,12 +3,13 @@ var ac = new AudioContext()
 
 var keyCodes = [65, 83, 68, 70, 71, 72, 74, 75]
 
-var sfzUrl = "/70s-synth/70s Organ Vibrato.sfz"
+var sfzUrl = "./70s-synth/70s Organ Vibrato.sfz"
 
 var loadPreset = function(url){
+  console.log("url", url);
   sfz.load(ac, url, function(instrument){
     window.instrument = instrument
-    console.log("instrument loaded")
+    console.log("instrument", instrument);
     //var regions = window.regions = instrument.regions
     //var noteOn = { pitch: 60, velocity: 100, channel: 0 }
 
